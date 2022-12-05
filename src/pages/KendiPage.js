@@ -23,8 +23,7 @@ import db from "../firebase";
 const Img = styled('img')({
     margin: 'auto',
     display: 'block',
-    maxWidth: "%100",
-    objectFit: 'cover',
+    width: "%100",
     height: 250,
 });
 
