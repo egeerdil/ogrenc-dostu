@@ -29,7 +29,7 @@ const navConfig = [
   },
   {
     title: 'Kendi',
-    path: '/dashboard/Kendi',
+    path: '/dashboard/kendi',
     icon: icon('ic_user'),
   },
   {

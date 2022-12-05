@@ -23,7 +23,7 @@ export default function Router() {
         { path: 'app', element: <DashboardAppPage /> },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
-        { path: 'Kendi', element: <KendiPage /> },
+        { path: 'kendi', element: <KendiPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },
