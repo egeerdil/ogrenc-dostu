@@ -23,7 +23,7 @@ import db from "../firebase";
 const Img = styled('img')({
     margin: 'auto',
     display: 'block',
-    width: "%100",
+    width: 250,
     height: 250,
 });
 
@@ -96,7 +96,7 @@ export default function KendiPage() {
                             margin: 'auto',
                             marginBottom: 4 ,
                             width: 250,
-                            minHeight: 300,
+                            minHeight: 350,
                             flexGrow: 1,
                             backgroundColor: (theme) =>
                                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
