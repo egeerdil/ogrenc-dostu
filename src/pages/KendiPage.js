@@ -1,6 +1,6 @@
 
 
- import db from '../firebase';
+/* import db from '../firebase';
 import {useState} from 'react';
 
 export default function KendiPage() {
@@ -46,6 +46,6 @@ export default function KendiPage() {
     );
 }
 
-
+ */
 
 
