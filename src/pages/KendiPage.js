@@ -1,7 +1,8 @@
 import db from '../firebase';
 import {useState} from 'react';
 
-const Firestore = () => {
+export default function KendiPage() {
+
     const [name  , Setname] = useState("");
     const [age , Setage] = useState("");
     const [course , Setcourse] = useState("");
@@ -43,4 +44,4 @@ const Firestore = () => {
     );
 }
 
-export default Firestore;
+
