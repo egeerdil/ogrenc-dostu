@@ -24,6 +24,7 @@ const Img = styled('img')({
     margin: 'auto',
     display: 'block',
     maxWidth: "%100",
+    objectFit: 'cover',
     height: 250,
 });
 
