@@ -4,8 +4,7 @@ import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-
-
+import {Container, Stack} from "@mui/material";
 import {
     collection,
     getDocs,
@@ -14,20 +13,33 @@ import {
     deleteDoc,
     doc,
 } from "firebase/firestore";
+import {ProductFilterSidebar, ProductSort} from "../sections/@dashboard/products";
+
+
 
 import db from "../firebase";
+
 
 const Img = styled('img')({
     margin: 'auto',
     display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
+    maxWidth: "%100",
+    minHeight: 180,
 });
 
 export default function KendiPage() {
     const [newName, setNewName] = useState("");
     const [newAge, setNewAge] = useState(0);
     const [newPhoto, setNewPhoto] = useState("");
+    const [openFilter, setOpenFilter] = useState(false);
+
+    const handleOpenFilter = () => {
+        setOpenFilter(true);
+    };
+
+    const handleCloseFilter = () => {
+        setOpenFilter(false);
+    };
 
     const [users, setUsers] = useState([]);
     const usersCollectionRef = collection(db, "users");
@@ -59,17 +71,32 @@ export default function KendiPage() {
     return(
 
         <>
+        <Container>
+            <Typography variant="h4" sx={{ mb: 5 }}>
+                Öğrenciden öğrenciye 2. el ürün al
+            </Typography>
 
+            <Stack direction="row" flexWrap="wrap-reverse" alignItems="center" justifyContent="flex-end" sx={{ mb: 5 }}>
+                <Stack direction="row" spacing={1} flexShrink={0} sx={{ my: 1 }}>
+                    <ProductFilterSidebar
+                        openFilter={openFilter}
+                        onOpenFilter={handleOpenFilter}
+                        onCloseFilter={handleCloseFilter}
+                    />
+                    <ProductSort />
+                </Stack>
+            </Stack>
             {users.map((user) => {
                 return (
-                    <Paper
+                    <Paper elevation={5}
                         sx={{
 
-                            border: 1,
+
                             borderColor: 'grey.500',
                             margin: 'auto',
-                            marginBottom: 3 ,
-                            maxWidth: 500,
+                            marginBottom: 4 ,
+                            maxWidth: 200,
+                            minHeight: 300,
                             flexGrow: 1,
                             backgroundColor: (theme) =>
                                 theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -79,17 +106,17 @@ export default function KendiPage() {
                         >
                             <Grid item>
 
-                                <Img src={user.photo} alt="dsds" />
+                                <Img src={user.photo} alt="dsds"  />
 
                             </Grid>
                             <Grid item xs={12} sm container sx={{  }}>
                                 <Grid item xs container direction="column" spacing={2}>
                                     <Grid item xs>
 
-                                        <Typography sx={{ paddingLeft:3, fontSize:24 }} variant="subtitle2" gutterBottom>
+                                        <Typography sx={{ paddingLeft:2, fontSize:14 }} variant="subtitle2" gutterBottom>
                                              {user.name}
                                         </Typography >
-                                        <Typography sx={{ textAlign: 'right', paddingRight:3,fontSize:24, fontWeight: 'bold' }} variant="subtitle2" component="div" >
+                                        <Typography sx={{ textAlign: 'right', paddingRight:2,fontSize:14, fontWeight: 'bold' }} variant="subtitle2" component="div" >
                                              {user.age}
                                         </Typography>
                                     </Grid>
@@ -101,8 +128,10 @@ export default function KendiPage() {
                             </Grid>
                         </Grid>
                     </Paper>
+
                 );
             })};
+        </Container>
             </>
     )
 
