@@ -24,7 +24,7 @@ const Img = styled('img')({
     margin: 'auto',
     display: 'block',
     maxWidth: "%100",
-    minHeight: 180,
+    height: 250,
 });
 
 export default function KendiPage() {
@@ -95,7 +95,7 @@ export default function KendiPage() {
                             borderColor: 'grey.500',
                             margin: 'auto',
                             marginBottom: 4 ,
-                            maxWidth: 200,
+                            width: 250,
                             minHeight: 300,
                             flexGrow: 1,
                             backgroundColor: (theme) =>
