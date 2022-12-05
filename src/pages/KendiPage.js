@@ -11,7 +11,7 @@ import {
 
 import db from "../firebase";
 
-function KendiPage() {
+export default function KendiPage() {
     const [newName, setNewName] = useState("");
     const [newAge, setNewAge] = useState(0);
     const [newPhoto, setNewPhoto] = useState("");
@@ -96,4 +96,3 @@ function KendiPage() {
     );
 }
 
-export default KendiPage;
