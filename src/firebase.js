@@ -1,7 +1,8 @@
-import firebase from "firebase"
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDMkW_l8W-_4b7TM06nMGZzPG0tCvd6zPI",
     authDomain: "ogrencidostu-fbde6.firebaseapp.com",
     projectId: "ogrencidostu-fbde6",
@@ -12,6 +13,6 @@ var firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
+const db = firebase.firestore();
 
-export default db;
+export default db ;
