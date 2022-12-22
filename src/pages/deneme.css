@@ -24,7 +24,7 @@ body {
 
 .card {
     box-shadow: 0 0 10px 5px #e1e5ee;
-    border-radius: 0.2rem;
+    border-radius: 0.8rem;
     min-width: 28rem;
     display: flex;
 }
@@ -32,6 +32,8 @@ body {
     width: 14rem;
     height: 11rem;
     object-fit: cover;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
 }
 .card__body {
     margin: 1rem;
