@@ -72,7 +72,7 @@ body {
     color: #0e48fe;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 200px) {
     .wrapper {
         grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
     }
