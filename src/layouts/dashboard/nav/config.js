@@ -18,6 +18,11 @@ const navConfig = [
     icon: icon('ic_user'),
   },
   {
+    title: 'Deneme',
+    path: '/dashboard/deneme',
+    icon: icon('ic_user'),
+  },
+  {
     title: 'Kullanıcı',
     path: '/dashboard/user',
     icon: icon('ic_user'),

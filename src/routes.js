@@ -4,6 +4,7 @@ import DashboardLayout from './layouts/dashboard';
 import SimpleLayout from './layouts/simple';
 //
 import BlogPage from './pages/BlogPage';
+import DenemePage from './pages/deneme';
 import UserPage from './pages/UserPage';
 import LoginPage from './pages/LoginPage';
 import KendiPage from './pages/KendiPage';
@@ -25,6 +26,7 @@ export default function Router() {
         { path: 'products', element: <ProductsPage /> },
         { path: 'kendi', element: <KendiPage /> },
         { path: 'blog', element: <BlogPage /> },
+        { path: 'deneme', element: <DenemePage /> },
       ],
     },
     {
